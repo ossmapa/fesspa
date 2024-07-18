@@ -10,5 +10,14 @@ function kirimPesan() {
     $.ajax({
         url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${realMessage}&parse_mode=html`,
         method: `POST`,
-    })
+       success: function(response) {
+            // Menampilkan pesan sukses jika permintaan berhasil
+            alert('Haii ditunggu postingannya yaa');
+            message.value = ''; // Mengosongkan field message setelah pengiriman pesan
+        },
+        error: function() {
+            // Menampilkan pesan kesalahan jika permintaan gagal
+            alert('Terjadi kesalahan, pesan tidak dapat dikirim!');
+        }
+    });
 }
