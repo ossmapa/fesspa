@@ -7,20 +7,23 @@
     <title>Fesspa</title>
 </head>
 <body>
-    <form class="m-4">
+    <h1 class="text-center mt-5">FESSPA</h1>
+    <form class="m-4 bg-warning p-4 rounded-4">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Tulis Pesan</label>
+          <label class="form-label">To</label>
+          <input type="text" class="form-control to" id="to">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">From</label>
+          <input type="text" class="form-control from" id="from">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
           <input type="text" class="form-control message" id="message">
           <div id="emailHelp" class="form-text">Privacy amannn 100%</div>
         </div>
-        <input type="button" id="kirim" value="KIRIM" onclick="event.preventDefault(); kirimPesan()" />
+        <input type="button" id="kirim" value="kirim" class="rounded-3 border-1" onclick="kirimPesan()" />
     </form>
-      </form>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-        integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-      </script>
-      <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
